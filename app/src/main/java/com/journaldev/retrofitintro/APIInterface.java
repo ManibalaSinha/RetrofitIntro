@@ -12,9 +12,7 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 
-/**
- * Created by anupamchugh on 09/01/17.
- */
+
 
 interface APIInterface {
 
@@ -25,7 +23,7 @@ interface APIInterface {
     Call<User> createUser(@Body User user);
 
     @GET("/api/users?")
-    Call<UserList> doGetUserList(@Query("page") String city);
+    Call<UserList> doGetUserList(@Query("city") String city);
 
     @FormUrlEncoded
     @POST("/api/users?")
